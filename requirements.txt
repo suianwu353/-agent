@@ -1,4 +1,3 @@
 requests
-flask
 dashscope
 python-dotenv

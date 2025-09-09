@@ -15,7 +15,7 @@ smart_reminder_agent/
 1️⃣ 克隆项目
 bash
 git clone https://github.com/suianwu353/-agent.git
-cd smart_reminder_agent
+cd -agent
 2️⃣ 创建虚拟环境并激活
 bash
 python3 -m venv venv
@@ -24,3 +24,8 @@ source venv/bin/activate      # macOS / Linux / WSL
 3️⃣ 安装依赖
 bash
 pip install -r requirements.txt
+
+ ### 运行 python main.py 
+
+### (或python3 main.py)
+
