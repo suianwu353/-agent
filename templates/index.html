@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智能提醒系统 - 网页版</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📅 智能提醒系统</h1>
+            <p>输入您的提醒事项，AI将自动解析时间、地点和事件信息</p>
+        </header>
+
+        <main>
+            <div class="input-section">
+                <textarea id="inputText" placeholder="请输入您的提醒事项，例如：'明天下午3点在公司开会，记得带资料'" rows="4"></textarea>
+                <button id="addBtn">添加提醒</button>
+            </div>
+
+            <div class="loading" id="loading" style="display: none;">
+                <div class="spinner"></div>
+                <p>AI正在分析中...</p>
+            </div>
+
+            <div class="result-message" id="resultMessage" style="display: none;">
+                <p id="messageText"></p>
+            </div>
+
+            <div class="tasks-section">
+                <h2>我的提醒事项</h2>
+                <div id="tasksContainer">
+                    <div class="empty-state" id="emptyState">
+                        <p>暂无提醒事项，请添加新的提醒</p>
+                    </div>
+                    <div id="tasksList"></div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>基于通义千问大模型构建</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
